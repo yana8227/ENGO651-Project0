@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Poker Math & Probability</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="StyleSheet.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+
+    
+    <body>
+        <h2>
+            Poker Math & Probability
+        </h2>
+        <ol id="content">
+            <li>
+                Probability and Cards
+                <p style="margin-top:10px;">
+                    Probability is the branch of mathematics that deals with the likelihood that one outcome or another will occur. For instance, a coin flip has two possible outcomes: heads or tails. The probability that a flipped coin will land heads is 50% (one outcome out of the two); the same goes for tails.
+                </p>
+                <p>
+                    When dealing with a deck of cards the number of possible outcomes is clearly much greater than the coin example. Each poker deck has fifty-two cards, each designated by one of four suits (clubs, diamonds, hearts and spades) and one of thirteen ranks (the numbers two through ten, Jack, Queen, King, and Ace). Therefore, the odds of getting any Ace as your first card are 1 in 13 (7.7%), while the odds of getting any spade as your first card are 1 in 4 (25%).
+                </p>
+                <p>
+                    Unlike coins, cards are said to have “memory”: every card dealt changes the makeup of the deck. For example, if you receive an Ace as your first card, only three other Aces are left among the remaining fifty-one cards. Therefore, the odds of receiving another Ace are 3 in 51 (5.9%), much less than the odds were before you received the first Ace.
+                </p>
+            </li>
+            <li>
+                Preflop Probabilities: Hand vs. Hand
+                <p style="margin-top:10px;">
+                    Players don’t play poker in a vacuum; each player’s hand must measure up against his opponent’s, especially if a player goes all-in before the flop. Here are some sample probabilities for most pre-flop situations:
+                </p>
+                <table>
+                    <tr>
+                        <th>Your Private Cards</th>
+                        <th>Your Opponent's Private Cards</th>
+                        <th>Winning Probability</th>
+                    </tr>
+                    <tr>
+                        <td>High Pair</td>
+                        <td>Two Low Non-Pair cards</td>
+                        <td>83%</td>
+                    </tr>
+                    <tr>
+                        <td>High Pair</td>
+                        <td>Low Pair</td>
+                        <td>82%</td>
+                    </tr>
+                    <tr>
+                        <td>Middle Pair</td>
+                        <td>One High Card and One Low Card</td>
+                        <td>71%</td>
+                    </tr>
+                    <tr>
+                        <td>High Non-Pair Cards</td>
+                        <td>Two Low Non-Pair Cards</td>
+                        <td>63%</td>
+                    </tr>
+                    <tr>
+                        <td>High Non-Pair Cards</td>
+                        <td>Low Pair</td>
+                        <td>55%</td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                Post-Flop Probabilities
+                <p style="margin-top:10px;">
+                    Now let’s look at the chances of certain events occurring when playing certain starting hands. The following table lists some interesting and valuable hold’em math:
+                </p>
+                <table>
+                    <tr>
+                        <th>The Probability that...</th>
+                        <th>Probability of occurrence</th>
+                        <th>Odds</th>
+                    </tr>
+                    <tr>
+                        <td>Non-pairs will make at least one pair</td>
+                        <td>32.00%</td>
+                        <td>2-to-1</td>
+                    </tr>
+                    <tr>
+                        <td>Two suited cards will make a flush</td>
+                        <td>6.50%</td>
+                        <td>15-to-1</td>
+                    </tr>
+                    <tr>
+                        <td>Two suited cards will flop a flush</td>
+                        <td>0.85%</td>
+                        <td>118-to-1</td>
+                    </tr>
+                    <tr>
+                        <td>Two suited cards will flop a four flush</td>
+                        <td>10.90</td>
+                        <td>9-to-1</td>
+                    </tr>
+                    <tr>
+                        <td>A pair will flop a set</td>
+                        <td>12.00%</td>
+                        <td>8-to-1</td>
+                    </tr>
+                    <tr>
+                        <td>A pair will flop four of a kind</td>
+                        <td>0.25%</td>
+                        <td>400-to-1</td>
+                    </tr>
+                </table>
+                <p>
+                    Many beginners to poker overvalue certain starting hands, such as suited cards. As you can see, suited cards don’t make flushes very often. Likewise, pairs only make a set on the flop 12% of the time, which is why small pairs are not always profitable.
+                </p>
+            </li>
+            <li>
+                Odds and Outs
+                <p style="margin-top:10px;">
+                    If you do see a flop, you will also need to know what the odds are of either you or your opponent improving a hand. In poker terminology, an “out” is any card that will improve a player’s hand after the flop.
+                </p>
+                <p>
+                    One common occurrence is when a player holds two suited cards and two cards of the same suit appear on the flop. The player has four suited cards and needs one more of the remaining nine cards of that suit to make a flush. In the case of a “four-flush”, the player has nine “outs” to make his flush.
+                </p>
+                <img id="image3" class="rounded mx-auto d-block" src="outs.png">
+                <p>
+                    A useful shortcut to calculating the odds of completing a hand from a number of outs is the “rule of four and two”. The player counts the number of cards that will improve his hand, and then multiplies that number by four to calculate his probability of catching that card on either the turn or the river. If the player misses his draw on the turn, he multiplies his outs by two to find his probability of filling his hand on the river.
+                </p>
+                <p>
+                    In the example of the four-flush, the player’s probability of filling the flush is approximately 36% on the Turn and River (9 outs x 4) and 18% on the River(9 outs x 2).
+                </p>
+            </li>
+            <li>
+                Pot Odds
+                <p>
+                    Another important concept in calculating odds and probabilities is pot odds. Pot odds are the proportion of the next bet in relation to the size of the pot.
+                </p>
+                <p>
+                    For instance, if the pot is $90 and the player must call a $10 bet to continue playing the hand, he is getting 9 to 1 (90 to 10) pot odds. If he calls, the new pot is now $100 and his $10 call makes up 10% of the new pot.
+                </p>
+                <p>
+                    Experienced players compare the pot odds to the odds of improving their hand. If the pot odds are higher than the odds of improving the hand, the expert player will call the bet; if not, the player will fold. 
+                </p>
+            </li>
+            <li>
+                Bad Beats
+                <p style="margin-top:10px;">
+                    A “bad beat” happens when a player completes a hand that started out with a very low probability of success. Experts in probability understand the idea that, just because an event is highly unlikely, the low likelihood does not make it completely impossible.
+                </p>
+                <p>
+                    A measure of a player’s experience and maturity is how he handles bad beats. In fact, many experienced poker players subscribe to the idea that bad beats are the reason that many inferior players stay in the game. Bad poker players often mistake their good fortune for skill and continue to make the same mistakes, which the more capable players use against them.
+                </p>
+                <p>
+                    One of the most important reasons that novice players should understand how probability functions at the poker table is so that they can make the best decisions during a hand. While fluctuations in probability (luck) will happen from hand to hand, the best poker players understand that skill, discipline and patience are the keys to success at the tables.
+                </p>
+            </li>
+        </ol>
+        <div class="row justify-content-center" style="margin-top:100px">
+            <a class="btn btn-primary" href="Main-Page.html" role="button" >&#8678;  Back to The Main Page</a>
+        </div>
+    </body>
+</html>

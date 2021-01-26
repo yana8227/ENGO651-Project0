@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Texas Hold'em Poker Tutorial</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="StyleSheet" href="StyleSheet.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+
+    
+    <body>
+        <h2>
+            <span style="color: green">&clubs;</span><span style="color: red">&hearts;</span>   
+            A Beginner's Guide to Texas Hold'em Poker   
+            <span style="color: red">&hearts;</span><span style="color: green">&clubs;</span>
+        </h2>
+        <p id="intro">
+        This is a basic tutorial for anyone who is interested to learn Texas Hold'em poker. 
+        The tutorial will introduce the game of Texas Hold'em poker in the following four steps:    
+        </p>
+        <ol id="outline">
+            <li><a href="#what">What is Texas Hold'em Poker?</a></li>
+            <li><a href="#rules">The Rules of Texas Hold'em Poker</a></li>
+            <li><a href="#ranks">The Hand-Rankings in Texas Hold'em Poker</a></li>
+            <li><a href="#math&str">The Mathematics and Strategies of Texas Hold'em Poker</a></li>
+        </ol>
+
+        <ol id="content">
+            <li id="what">
+                What is Texas Hold'em Poker?
+                <p style="margin-top:10px;">
+                    Texas Hold'em is the world's most popular variant of poker game played in 
+                    both live casinos and online. Popularity of the game surged in the 2000s 
+                    due to exposures on TV, Internet, and in popular literatures. The 
+                    simplicity of the game's rules, hand-ranking, and intense gameplays 
+                    made it the most popular and well-known poker game around the
+                    world. The history background of Texas Hold'em can be found <a href="PokerHistory.html">here</a>.
+                </p>
+            </li>
+            <li id="rules">
+                    The Rules of Texas Hold'em Poker
+                <h5 style="color: #962323; margin-top:10px;">Table Positions</h5>
+                <p>
+                    The game uses a standard deck of 52 cards (without joker cards) and is often played 
+                    on a table with 2 to 10 players. An illustration of the position names on a standard 
+                    nine-handed table is shown below. The abbreviations stands for: Under The Guns (UTG, UTG+1, UTG+2), 
+                    Middle Positions (Low Jack, High Jack), Cut Off (CO), Button (BTN), Small Blind (SB), Big Blind (BB).
+                </p>
+                <img id="image1" class="rounded mx-auto d-block" src="poker-position.jpg">
+                <p>
+                    Before each game starts, players at the SB and BB positons are forced to post certain amount of chips
+                    to initiate the betting. The amount the "blinds" can vary depending on the table stakes. Typically,
+                    the small blind is half the size of the big blind (e.g. in a $1/$2 Hold’em game the small blind is $1 
+                    and the big blind is $2). After each game finishes, all positions rotate clock-wise on the table so that 
+                    each player gets to play on every positions. 
+                </p>
+                <h5 style="color: #962323; margin-top: 30px;">Game Play</h5>
+                <p>   
+                    The goal of a Texas Hold'em game is to use the two cards in your hand in combination with the community 
+                    cards to make the best possible five-card poker hand (compared on a <a href="#ranks">Hand-Ranking system</a>), and to earn as many chips as possible from your 
+                    oppnents. The game is consisted of five stages:
+                </p>
+                <ul id="stages">
+                    <li>Preflop</li>
+                    <li>Flop</li>
+                    <li>Turn</li>
+                    <li>River</li>
+                    <li>Showdown</li>
+                </ul>
+                <p>
+                    <b>Preflop:</b> during the preflop stage, each player is dealt with two private cards that 
+                    can only be revealed by themselves. Next, players make actions one by one in a 
+                    clock-wise order--starting from the UTG position all the way to the BB. Players can 
+                    either <b>call</b> (bet chips equal to the previous player's bet; in this stage, the first player who calls
+                    needs a bet size equal to the big blind), <b>fold</b> (discard a hand and give up the current pot), <b>raise</b> (bet chips 
+                    more than the big blind after all previous players are either called or folded), or <b>re-raise</b> (bet a even larger 
+                    size compared to a previous raise). 
+                </p>
+                <p>
+                    Note: If a player raises the bet, each player must now call the new amount to continue playing the current hand, 
+                    including those who may have already acted. If a player chooses to fold, the money already in the "Pot" from the 
+                    prior "call" remains in the pot. If no player raises the big blind, then the player in BB position may check or raise.
+                    The round of betting stops when all players have either folded or called the last raise.
+                </p>
+                <img id="image2" class="rounded mx-auto d-block" src="stages.png">
+                <p>
+                    <b>Flop:</b> three cards are being dealt to the middle of the table (facing up). They are called the community 
+                    cards as they can be seen by everyone on the table. Then a new betting round starts, from the SB position clock-wise to the 
+                    BTN. In addition to call, fold, raise and re-raise, Players now have the options to <b>check</b> (without betting anything) 
+                    and <b>bet</b> (any desired size larger than the big blind). 
+                </p>
+                <p>
+                    A player may check or bet only if the player is the first to act or all previous players have checked; if a previous player 
+                    has bet, raise, or re-raised, the player may only choose to call, fold, or re-raise. the betting round ends when all players have 
+                    folded or called the last bet or raise, or if all players have "checked".
+                </p>
+                <p>
+                    <b>Turn:</b> One more community card is dealt to the table centre, followed by another betting round (same as the Flop).
+                </p>
+                <p>
+                    <b>River:</b> The last community card is dealt to the table centre, followed by the final round of betting (same as the Flop).
+                </p>
+                <p>
+                    In any of the previous stages (Preflop, Flop, Turn, River), if there is only one player remaining on the table (all other 
+                    players are folded), the player wins the round and takes all the pot (all chips remain on the table) and no later stages will 
+                    be proceeded; if more than one player remains after the last betting round, the next Showdown stage is proceeded.
+                </p>
+                <p>
+                    <b>Showdown:</b> All players remaining on the table expose and compare their hands to determine the winner. 
+                </p>
+                <p> 
+                    Each player has seven cards (the two private cards + the five community cards), and whichever five cards that make the best hand on the 
+                    <a href="#ranks">Hand-Ranking system</a> becomes the player's hand. All remaining players' hands are compared and the hand with the highest rank on the 
+                    <a href="#ranks">Hand-Ranking system</a> wins the game.
+                </p>
+            </li>
+            <li id="ranks">
+                The Hand-Rankings in Texas Hold'em Poker
+                <p style="margin-top:10px;">
+                    The Hand-Ranking system is not specifically a part of Texas hold'em rules, but apply to many different poker games.
+                    A hand always consist of five cards. Individual cards are "ranked" as follows (high-to-low): A, K, Q, J, 10, 9, 8, 7, 6, 5, 4, 3, 2.
+                </p>
+                <p>
+                    Here are the "Rank of Hands" in the order of Strength from the highest to the lowest:
+                </p>
+                <table>
+                    <tr>
+                        <th>Hand Name</th>
+                        <th>Explaination</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>Royale Flush</td>
+                        <td>A, K, Q, J, 10, all in the same suit.</td>
+                        <td><span style="color: red">A&hearts; K&hearts; Q&hearts; J&hearts; 10&hearts;</span></td>
+                    </tr>
+                    <tr>
+                        <td>Straight Flush</td>
+                        <td>Five cards in a sequence, all in the same suit.</td>
+                        <td><span style="color: green">8&clubs; 7&clubs; 6&clubs; 5&clubs; 4&clubs;</span></td>
+                    </tr>
+                    <tr>
+                        <td>Four of a Kind</td>
+                        <td>All four cards of the same rank.</td>
+                        <td><span style="color: red">Q&hearts;</span>
+                            <span style="color: blue">Q&diams;</span>
+                            <span style="color: black">Q&spades;</span>
+                            <span style="color: green">Q&clubs;</span>
+                            <span style="color: blue">4&diams;</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Full house</td>
+                        <td>Three of a kind with a pair.</td>
+                        <td><span style="color: red">10&hearts;</span>
+                            <span style="color: blue">10&diams;</span>
+                            <span style="color: black">10&spades;</span>
+                            <span style="color: green">9&clubs;</span>
+                            <span style="color: blue">9&diams;</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Flush</td>
+                        <td>Any five cards of the same suit, but not in a sequence.</td>
+                        <td><span style="color: black">4&spades;</span>
+                            <span style="color: black">J&spades;</span>
+                            <span style="color: black">8&spades;</span>
+                            <span style="color: black">2&spades;</span>
+                            <span style="color: black">9&spades;</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Straight</td>
+                        <td>Five cards in a sequence, but not of the same suit.</td>
+                        <td><span style="color: green">9&clubs;</span>
+                            <span style="color: blue">8&diams;</span>
+                            <span style="color: black">7&spades;</span>
+                            <span style="color: blue">6&diams;</span>
+                            <span style="color: red">5&hearts;</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Three of a kind</td>
+                        <td>Three cards of the same rank.</td>
+                        <td><span style="color: green">7&clubs;</span>
+                            <span style="color: blue">7&diams;</span>
+                            <span style="color: black">7&spades;</span>
+                            <span style="color: green">K&clubs;</span>
+                            <span style="color: blue">5&diams;</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Two pair</td>
+                        <td>Two different pairs.</td>
+                        <td><span style="color: green">4&clubs;</span>
+                            <span style="color: black">4&spades;</span>
+                            <span style="color: green">3&clubs;</span>
+                            <span style="color: blue">3&diams;</span>
+                            <span style="color: green">Q&clubs;</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pair</td>
+                        <td>Two cards of the same rank.</td>
+                        <td><span style="color: red">A&hearts;</span>
+                            <span style="color: blue">A&diams;</span>
+                            <span style="color: green">8&clubs;</span>
+                            <span style="color: black">4&spades;</span>
+                            <span style="color: red">7&hearts;</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>High Card</td>
+                        <td>five unmatched cards; the highest card plays.</td>
+                        <td><span style="color: black">A&clubs;</span>
+                            <span style="color: blue">J&diams;</span>
+                            <span style="color: green">10&clubs;</span>
+                            <span style="color: black">5&spades;</span>
+                            <span style="color: red">2&hearts;</span>
+                        </td>
+                    </tr>
+                </table>
+            </li>
+            <li id="math&str">
+                The Mathematics and Strategies of Texas Hold'em Poker
+                <p style="margin-top:10px;">
+                    Poker is a game of mathematics and using the ability to read situations and opponents to give you the advantage in each hand you play.
+                </p>
+                <p>
+                    Though there are thousands of possibilities on every hand of Texas holdem, you can use the fact that everything is based on a set of 52 cards to predict outcomes and possibilities at every stage for every hand. 
+                    Common uses of mathematics in poker can be found <a href="PokerMath.html">here</a>.
+                </p>
+                <p>
+                    Some strategy tips for beginners can be found <a href="PokerStrategy.html">here</a>.
+                </p>
+            </li>
+        </ol>
+    </body>
+</html>
